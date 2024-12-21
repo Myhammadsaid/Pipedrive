@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="main.css" />
+		<title>Task Form</title>
+	</head>
+	<body>
+		<h1>Create Task</h1>
+		<div class="container">
+			<!-- Client details -->
+			<div class="card">
+				<h2>Client details</h2>
+				<label for="first-name">First name</label>
+				<input type="text" id="first-name" placeholder="Enter first name" />
+
+				<label for="last-name">Last name</label>
+				<input type="text" id="last-name" placeholder="Enter last name" />
+
+				<label for="phone">Phone</label>
+				<input type="tel" id="phone" placeholder="Enter phone number" />
+
+				<label for="email">Email (optional)</label>
+				<input type="email" id="email" placeholder="Enter email" />
+			</div>
+
+			<!-- Job details -->
+			<div class="card">
+				<h2>Job details</h2>
+				<label for="job-type">Job type</label>
+				<select id="job-type">
+					<option value="">Select job type</option>
+					<option value="type1">Type 1</option>
+					<option value="type2">Type 2</option>
+				</select>
+
+				<label for="job-source">Job source</label>
+				<select id="job-source">
+					<option value="">Select job source</option>
+					<option value="source1">Source 1</option>
+					<option value="source2">Source 2</option>
+				</select>
+
+				<label for="job-desc">Job description (optional)</label>
+				<textarea id="job-desc" placeholder="Enter job description"></textarea>
+			</div>
+
+			<!-- Service location -->
+			<div class="card">
+				<h2>Service location</h2>
+				<label for="address">Address</label>
+				<input type="text" id="address" placeholder="Enter address" />
+
+				<label for="city">City</label>
+				<input type="text" id="city" placeholder="Enter city" />
+
+				<label for="state">State</label>
+				<input type="text" id="state" placeholder="Enter state" />
+
+				<label for="zip">Zip code</label>
+				<input type="text" id="zip" placeholder="Enter zip code" />
+
+				<label for="area">Area</label>
+				<select id="area">
+					<option value="">Select area</option>
+					<option value="area1">Area 1</option>
+					<option value="area2">Area 2</option>
+				</select>
+			</div>
+
+			<!-- Scheduled -->
+			<div class="card">
+				<h2>Scheduled</h2>
+				<label for="start-date">Start date</label>
+				<input type="date" id="start-date" />
+
+				<label for="start-time">Start time</label>
+				<input type="time" id="start-time" />
+
+				<label for="end-time">End time</label>
+				<input type="time" id="end-time" />
+
+				<label for="test-select">Test select</label>
+				<select id="test-select">
+					<option value="">Select option</option>
+					<option value="test1">Test 1</option>
+					<option value="test2">Test 2</option>
+				</select>
+			</div>
+		</div>
+		<button id="submit-button">Submit</button>
+	</body>
+	<script src="main.js"></script>
+</html>
