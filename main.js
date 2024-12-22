@@ -38,10 +38,9 @@ function clearForm() {
 	})
 }
 async function sendToPipedrive(data) {
-	const apiToken = '027bc21098585d289bf4231074b25faa193c9173' // замените на ваш API-токен
+	const apiToken = '027bc21098585d289bf4231074b25faa193c9173'
 	const url = `https://api.pipedrive.com/v1/deals?api_token=${apiToken}`
 
-	// Создаём объект данных, подходящий для Pipedrive
 	const body = {
 		title: `${data.clientDetails.firstName} ${data.clientDetails.lastName} - Job`,
 		value: 0,
@@ -74,7 +73,6 @@ async function sendToPipedrive(data) {
 		console.log('Deal successfully created in Pipedrive:', result)
 		alert('Deal created successfully!')
 
-		// Очистка формы
 		clearForm()
 	} catch (error) {
 		console.error('Error creating deal:', error)
@@ -83,7 +81,7 @@ async function sendToPipedrive(data) {
 }
 
 document.getElementById('submit-button').addEventListener('click', async e => {
-	e.preventDefault() // предотвращаем перезагрузку страницы
-	const formData = collectFormData() // собираем данные формы
-	await sendToPipedrive(formData) // отправляем их в Pipedrive
+	e.preventDefault()
+	const formData = collectFormData()
+	await sendToPipedrive(formData)
 })
